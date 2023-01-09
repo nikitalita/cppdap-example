@@ -6,7 +6,6 @@
   "description": "cppdap is a C++11 library SDK implementation of the Debug Adapter Protocol, providing an API for implementing a DAP client or server.",
   "homepage": "https://github.com/google/cppdap",
   "license": "Apache-2.0",
-  "supports": "x64",
   "dependencies":[
     {
       "name": "vcpkg-cmake",
