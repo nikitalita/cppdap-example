@@ -12,7 +12,11 @@ vcpkg_check_features(OUT_FEATURE_OPTIONS FEATURE_OPTIONS
     use-nlohmann-json CPPDAP_USE_EXTERNAL_NLOHMANN_JSON_PACKAGE
     use-rapidjson CPPDAP_USE_EXTERNAL_RAPIDJSON_PACKAGE
 )
-message(STATUS "FEATURE OPTIONS = ${FEATURE_OPTIONS}")
+
+if (NOT CPPDAP_USE_EXTERNAL_NLOHMANN_JSON_PACKAGE AND NOT CPPDAP_USE_EXTERNAL_RAPIDJSON_PACKAGE)
+  message(FATAL_ERROR "Must set either \"use-nlohmann-json\" or \"use-rapidjson\" feature.")
+endif()
+
 vcpkg_cmake_configure(
     SOURCE_PATH "${SOURCE_PATH}"
     OPTIONS

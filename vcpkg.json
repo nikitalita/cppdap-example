@@ -20,7 +20,7 @@
           {
             "name": "cppdap",
             "default-features": false,
-            "features": ["rapidjson"]
+            "features": ["use-rapidjson"]
           }
         ]
       }
