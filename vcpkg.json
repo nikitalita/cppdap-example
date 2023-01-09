@@ -6,7 +6,6 @@
     "description": "cppdap example",
     "homepage": "https://github.com/google/cppdap",
     "license": "Apache-2.0",
-    "supports": "windows & x64",
     "features": {
       "cppdap-with-nlohmann-json": {
         "description": "Use nlohmann-json package for the JSON library (cppdap defaults to nlohmann-json)",
