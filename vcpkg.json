@@ -1,0 +1,32 @@
+{
+    "$schema": "https://raw.githubusercontent.com/microsoft/vcpkg-tool/main/docs/vcpkg.schema.json",
+    "name": "cppdap-example",
+    "version-semver": "1.58.0",
+    "port-version": 0,
+    "description": "cppdap example",
+    "homepage": "https://github.com/google/cppdap",
+    "license": "Apache-2.0",
+    "supports": "windows & x64",
+    "features": {
+      "cppdap-with-nlohmann-json": {
+        "description": "Use nlohmann-json package for the JSON library (cppdap defaults to nlohmann-json)",
+        "dependencies": [
+          "cppdap"
+        ]
+      },
+      "cppdap-with-rapidjson": {
+        "description": "Use rapidjson package for the JSON library",
+        "dependencies": [
+          {
+            "name": "cppdap",
+            "default-features": false,
+            "features": ["rapidjson"]
+          }
+        ]
+      }
+    },
+    "default-features": ["cppdap-with-nlohmann-json"],
+    "vcpkg-configuration": {
+      "overlay-ports": ["./ports"]
+    }
+}

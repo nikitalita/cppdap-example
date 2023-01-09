@@ -1,0 +1,4 @@
+build/
+fuzz/corpus
+fuzz/logs
+CMakeSettings.json
